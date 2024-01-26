@@ -1,16 +1,24 @@
-
+import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import {puppyList} from './data.js'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [puppies, setPuppies] = useState(puppyList);
+
+  console.log("puppyList: ", puppyList);
 
   return (
-    <div>
-      // Scaffold React App done
+    <div className="App">
+      {
+        puppies.map((puppy) => {
+             return <p key={puppy.id}>{puppy.name}</p>;
+           })
+       }
     </div>
-  )
+  );
 }
 
 export default App
