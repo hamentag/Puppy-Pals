@@ -10,24 +10,30 @@
   flex-wrap: wrap;
 }
 .App p{
-  flex: 0 0 calc(33.33% - 10px);
+  flex: 0 0 calc(33% - 10px);
   border: 1px solid rgb(75, 75, 75);
   border-radius: 15px;
   padding: 5px 0;
   background-color: beige;
 }
 .App div{
-  position: absolute;
-  top: 10px;
+  /* position: absolute;
+  bottom: 10px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
+  order: -1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .App ul{
-  list-style-type: none;
+  list-style-type: none; 
   border: 1.5px solid rgb(103, 103, 103);
   background-color: rgba(177, 213, 233, 0.6);
   border-radius: 15px;
   padding: 15px;
+  width: fit-content;
 }
 
 .logo {
